@@ -5,11 +5,19 @@ public class AnimationManager : MonoBehaviour
     float SnappedHorizontal = 0;
     float SnappedVertical = 0;
 
+    [SerializeField]
+    float speed = 100f;
+
     public Animator Animator;
 
     private void Awake()
     {
         Animator = GetComponent<Animator>();
+    }
+
+    public void Update()
+    {
+        PlayerInput();
     }
 
     public void HandleAnimatorValues(float HoziontalMovement, float VerticalMovement)
@@ -42,5 +50,14 @@ public class AnimationManager : MonoBehaviour
         }
         else
         { SnappedVertical = 0; }
+    }
+
+    private void PlayerInput()
+    {
+        float xDirection = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+        float yDirection = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        Vector3 moveDirection = new Vector3(xDirection, yDirection, 0).normalized * speed * Time.deltaTime;
+
+        HandleAnimatorValues(moveDirection.x, moveDirection.y);
     }
 }
