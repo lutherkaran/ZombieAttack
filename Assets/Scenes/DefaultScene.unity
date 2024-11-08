@@ -883,6 +883,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7946107158771866841}
+    - targetCorrespondingSourceObject: {fileID: 3148043056017873861, guid: 4d50e12de2172da4eb68076aee7fbdaa,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7946107158771866842}
+    - targetCorrespondingSourceObject: {fileID: 7699098931279212515, guid: 4d50e12de2172da4eb68076aee7fbdaa,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8218292974981892331}
   m_SourcePrefab: {fileID: 100100000, guid: 4d50e12de2172da4eb68076aee7fbdaa, type: 3}
 --- !u!1 &855375534659189293
 GameObject:
@@ -1061,6 +1069,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 800049086175745991}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4738327672809802468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7699098931279212515, guid: 4d50e12de2172da4eb68076aee7fbdaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 800049086175745991}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &6184858970632383478 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 3868558986831334949, guid: 4d50e12de2172da4eb68076aee7fbdaa,
@@ -1094,6 +1108,33 @@ MonoBehaviour:
   playerRigidbody: {fileID: 0}
   playerCameraTransform: {fileID: 241321950}
   roationSpeed: 3.5
+  quickTurnSpeed: 3.5
+--- !u!114 &7946107158771866842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4656039094305213274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcfa2709216dc648a1aae0b6027634d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 343f752b80a6e1148a7b9453ab7ff907, type: 2}
+--- !u!114 &8218292974981892331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4738327672809802468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfef2b5124a0c0408adad69d27b8e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeaponModel: {fileID: 0}
 --- !u!81 &8489030140690197032
 AudioListener:
   m_ObjectHideFlags: 0

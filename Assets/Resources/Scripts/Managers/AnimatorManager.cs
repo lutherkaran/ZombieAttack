@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AnimationManager : MonoBehaviour
+public class AnimatorManager : MonoBehaviour
 {
     float SnappedHorizontal = 0;
     float SnappedVertical = 0;

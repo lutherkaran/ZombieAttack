@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     PlayerControls playerControls;
-    AnimationManager animationManager;
+    AnimatorManager animationManager;
     PlayerManager playerManager;
     Animator animator;
 
@@ -25,7 +25,7 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        animationManager = GetComponent<AnimationManager>();
+        animationManager = GetComponent<AnimatorManager>();
         playerManager = GetComponent<PlayerManager>();
         animator = GetComponent<Animator>();
     }

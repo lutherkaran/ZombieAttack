@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
     PlayerLocomotionManager playerLocomotionManager;
     CameraManager playerCamera;
     InputManager inputManager;
-    AnimationManager animationManager;
+    AnimatorManager animationManager;
     PlayerManager playerManager;
 
     [Header("Player Flags")]
@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
         playerCamera = FindObjectOfType<CameraManager>();
         inputManager = GetComponent<InputManager>();
         playerLocomotionManager = GetComponent<PlayerLocomotionManager>();
-        animationManager = GetComponent<AnimationManager>();
+        animationManager = GetComponent<AnimatorManager>();
 
     }
 
