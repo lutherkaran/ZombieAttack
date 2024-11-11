@@ -1352,6 +1352,8 @@ GameObject:
   - component: {fileID: 5469514016002157520}
   - component: {fileID: 190564851853638419}
   - component: {fileID: 7640797689628835134}
+  - component: {fileID: 6315346253790874970}
+  - component: {fileID: 527115970507564533}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1494,7 +1496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 100
-  Animator: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!114 &190564851853638419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1507,6 +1509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997e4a35770068d46828f5dc1c362c75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPerformingAction: 0
+  isPerformingQuickTurn: 0
 --- !u!114 &7640797689628835134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1523,6 +1527,37 @@ MonoBehaviour:
   horizontalMovementInput: 0
   verticalCameraInput: 0
   horizontalCameraInput: 0
+  runInput: 0
+  quickTurnInput: 0
+--- !u!114 &6315346253790874970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148043056017873861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75542d301ef89104aa427c13cad0133f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRigidbody: {fileID: 0}
+  playerCameraTransform: {fileID: 0}
+  roationSpeed: 3.5
+  quickTurnSpeed: 3.5
+--- !u!114 &527115970507564533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148043056017873861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bcfa2709216dc648a1aae0b6027634d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 343f752b80a6e1148a7b9453ab7ff907, type: 2}
 --- !u!1 &3202033749374917276
 GameObject:
   m_ObjectHideFlags: 0
@@ -3002,6 +3037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8929782251020506818}
+  - component: {fileID: 4805777328055086677}
   m_Layer: 0
   m_Name: VBOT_:RightHand
   m_TagString: Untagged
@@ -3029,6 +3065,19 @@ Transform:
   - {fileID: 5407403752498101634}
   m_Father: {fileID: 1092597305980842170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4805777328055086677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7699098931279212515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dfef2b5124a0c0408adad69d27b8e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeaponModel: {fileID: 0}
 --- !u!1 &8069422262387143432
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,9 +30,9 @@ public class PlayerEquipmentManager : MonoBehaviour
 
     private void LoadCurrentWeapon()
     {
-        weaponLoaderSlot.LoadWeaponModel(weapon);
         //Load Current Weapon to the player Hand
-        animatorManager.animator.runtimeAnimatorController = weapon.weaponAnimator;
+        weaponLoaderSlot.LoadWeaponModel(weapon);
         //Change the player animations to the weapons animation
+        animatorManager.animator.runtimeAnimatorController = weapon.weaponAnimator;
     }
 }

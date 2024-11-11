@@ -32,9 +32,10 @@ public class CameraManager : MonoBehaviour
     {
         //Follow The player
         FollowPlayer();
-
         //Rotate The Camera
         RotateCamera();
+
+        HandleCameraCollision();
     }
 
     public void FollowPlayer()
@@ -68,5 +69,10 @@ public class CameraManager : MonoBehaviour
         targetRotation = Quaternion.Euler(cameraRotation);
         targetRotation = Quaternion.Slerp(cameraPivot.localRotation, targetRotation, cameraSmoothTime);
         cameraPivot.localRotation = targetRotation;
+    }
+
+    public void HandleCameraCollision()
+    {
+
     }
 }

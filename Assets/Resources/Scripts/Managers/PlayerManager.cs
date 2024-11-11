@@ -8,7 +8,6 @@ public class PlayerManager : MonoBehaviour
     CameraManager playerCamera;
     InputManager inputManager;
     AnimatorManager animationManager;
-    PlayerManager playerManager;
 
     [Header("Player Flags")]
     public bool isPerformingAction;
@@ -20,14 +19,13 @@ public class PlayerManager : MonoBehaviour
         inputManager = GetComponent<InputManager>();
         playerLocomotionManager = GetComponent<PlayerLocomotionManager>();
         animationManager = GetComponent<AnimatorManager>();
-
     }
 
     private void Update()
     {
         inputManager.HandleAllInputs();
-        isPerformingAction = animationManager.animator.GetBool("IsPerformingAnimation");
-        isPerformingQuickTurn = animationManager.animator.GetBool("isPerformingQuickTurn");
+        isPerformingAction = animationManager.animator.GetBool("IsPerformingAction");
+        isPerformingQuickTurn = animationManager.animator.GetBool("IsPerformingQuickTurn");
     }
 
     private void FixedUpdate()

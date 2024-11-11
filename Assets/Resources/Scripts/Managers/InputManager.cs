@@ -5,7 +5,7 @@ using UnityEngine;
 public class InputManager : MonoBehaviour
 {
     PlayerControls playerControls;
-    AnimatorManager animationManager;
+    AnimatorManager animatorManager;
     PlayerManager playerManager;
     Animator animator;
 
@@ -25,7 +25,7 @@ public class InputManager : MonoBehaviour
 
     private void Awake()
     {
-        animationManager = GetComponent<AnimatorManager>();
+        animatorManager = GetComponent<AnimatorManager>();
         playerManager = GetComponent<PlayerManager>();
         animator = GetComponent<Animator>();
     }
@@ -61,7 +61,7 @@ public class InputManager : MonoBehaviour
     {
         horizontalMovementInput = movementInput.x;
         verticalMovementInput = movementInput.y;
-        animationManager.HandleAnimatorValues(horizontalMovementInput, verticalMovementInput, runInput);
+        animatorManager.HandleAnimatorValues(horizontalMovementInput, verticalMovementInput, runInput);
     }
 
     public void HandleCameraInput()
@@ -76,7 +76,7 @@ public class InputManager : MonoBehaviour
         if (quickTurnInput)
         {
             animator.SetBool("IsPerformingQuickTurn", true);
-            animationManager.PlayAnimationWithoutRootMotion("QuickTurn", true);
+            animatorManager.PlayAnimationWithoutRootMotion("QuickTurn", true);
         }
     }
 }
